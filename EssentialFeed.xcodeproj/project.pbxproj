@@ -177,8 +177,9 @@
 		75BA6817274A44B1003FB9A6 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
-				75577A4B274ECD0200BF451C /* Feed Api */,
 				75BA6818274A44B1003FB9A6 /* EssentialFeed.h */,
+				752972892761358D004A3555 /* Helper */,
+				75577A4B274ECD0200BF451C /* Feed Api */,
 				75BA6825274A47FF003FB9A6 /* Feed Feature */,
 				75BA6819274A44B1003FB9A6 /* EssentialFeed.docc */,
 			);
@@ -198,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				75AAC9EE279D6DE1000C360B /* Feed Cache */,
-				752972892761358D004A3555 /* Helper */,
 				75BA682C274A48D4003FB9A6 /* EssentialFeedTests.swift */,
 				75297286275F6D06004A3555 /* Feed Api */,
 			);
