@@ -17,13 +17,13 @@ import EssentialFeed
     
     private(set) var receivedMessages  = [ReceivedMessage]()
     
-    private var deletionCompletions = [deletionCompletion]()
+    private var deletionCompletions = [DeletionCompletion]()
     
-    private var insertionCompletions = [insertionCompletion]()
+    private var insertionCompletions = [InsertionCompletion]()
      
-    private var retrievalCompletions = [retrievalCompletion]()
+    private var retrievalCompletions = [RetrievalCompletion]()
     
-    func deleteCachedFeed(completion: @escaping deletionCompletion) {
+    func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         deletionCompletions.append(completion)
         receivedMessages.append(.deleteCacheFeed)
     }
@@ -36,7 +36,7 @@ import EssentialFeed
         deletionCompletions[index](nil)
     }
     
-    func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping insertionCompletion) {
+    func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         insertionCompletions.append(completion)
         receivedMessages.append(.insert(feed, timestamp))
     }
@@ -49,7 +49,7 @@ import EssentialFeed
         insertionCompletions[index](nil)
     }
      
-     func retrieve(completion: @escaping retrievalCompletion) {
+     func retrieve(completion: @escaping RetrievalCompletion) {
          retrievalCompletions.append(completion)
          receivedMessages.append(.retrieve)
      }
