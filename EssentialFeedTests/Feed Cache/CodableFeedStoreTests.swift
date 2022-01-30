@@ -8,9 +8,11 @@
 import Foundation
 import XCTest
 import EssentialFeed
+
+typealias FailableFeedStore = FailableRetrieveFeedStoreSpecs & FailableInsertFeedStoreSpecs & FailableIDeleteFeedStoreSpecs
  
-class CodableFeedStoreTests: XCTestCase  {
-    
+class CodableFeedStoreTests: XCTestCase, FailableFeedStore {
+       
     override func setUp() {
         super.setUp()
         setupEmptyStoreState()
